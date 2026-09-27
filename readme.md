@@ -323,12 +323,3 @@ Questions, suggestions, or collaboration?
 * Open an [issue](https://github.com/<your-username>/telco-churn/issues)
 * Reach out on GitHub: `@jigarkhadka`
 
-## Publishing Checklist
-
-Before publishing, replace the following placeholders:
-
-* `<your-username>` in the clone URL
-* `<your-username>` in the issue URL
-* `<your-username>` in the GitHub contact section
-* Reported results with the actual values from your notebook
-
