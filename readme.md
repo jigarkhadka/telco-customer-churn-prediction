@@ -221,7 +221,7 @@ predictions.csv
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/telco-churn.git
+git clone https://github.com/jigarkhadka/telco-customer-churn-prediction.git
 cd telco-churn
 ```
 
@@ -321,7 +321,7 @@ This project is released under the **MIT License**. See `LICENSE` for details.
 Questions, suggestions, or collaboration?
 
 * Open an [issue](https://github.com/<your-username>/telco-churn/issues)
-* Reach out on GitHub: `@<your-username>`
+* Reach out on GitHub: `@jigarkhadka`
 
 ## Publishing Checklist
 
@@ -332,48 +332,3 @@ Before publishing, replace the following placeholders:
 * `<your-username>` in the GitHub contact section
 * Reported results with the actual values from your notebook
 
-### Dataset
-
-Do not commit the raw CSV to a public repository. Keep it excluded through `.gitignore` and provide instructions for downloading it from Kaggle.
-
-Alternatively, add a `data/README.md` containing the dataset download instructions.
-
-### Optional Improvements
-
-Export the comparison charts as PNG files into a `figures/` directory and embed them in the README:
-
-```markdown
-![Accuracy Comparison](figures/accuracy.png)
-![Precision Comparison](figures/precision.png)
-![F1 Comparison](figures/f1.png)
-![CV Accuracy Comparison](figures/cv_accuracy.png)
-```
-
-### Continuous Integration
-
-Optionally add a GitHub Actions workflow that executes the notebook on every push:
-
-```yaml
-name: Run Notebook
-
-on:
-  push:
-  pull_request:
-
-jobs:
-  notebook:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Execute notebook
-        run: jupyter nbconvert --execute telco_churn.ipynb --to notebook --output executed_notebook.ipynb
-```
